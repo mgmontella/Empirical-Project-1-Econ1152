@@ -1,0 +1,29 @@
+---
+title: "Empirical Project 1"
+author: "Michael Montella"
+date: "2/13/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(readxl)
+library(tidyverse)
+library(janitor)
+library(readr)
+library(stringr)
+library(fs)
+library(kableExtra)
+library(dplyr)
+library(formattable)
+library(lubridate)
+library(foreign)
+```
+
+```{r}
+# I am reading the .csv file, and then I am sorting state (which is the state's numerical place on an alphabetized list) for NJ
+read_csv("atlas.csv") %>%
+  filter(state == 34)
+```
+
+
